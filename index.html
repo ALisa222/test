@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор паролей</h1>
+        
+        <div class="password-wrapper">
+            <input type="text" id="password-output" readonly placeholder="Нажмите 'Сгенерировать'">
+            <button id="copy-btn" class="icon-btn" title="Копировать">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="toast" id="toast">Пароль скопирован!</div>
+
+        <div class="option">
+            <label for="length-slider">Длина: <span id="length-value">16</span></label>
+            <input type="range" id="length-slider" min="8" max="64" value="16">
+        </div>
+
+        <div class="checkboxes">
+            <label class="checkbox-label">
+                <input type="checkbox" id="lowercase" checked>
+                <span>Строчные буквы (a-z)</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="uppercase" checked>
+                <span>Заглавные буквы (A-Z)</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="numbers" checked>
+                <span>Цифры (0-9)</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="symbols" checked>
+                <span>Спецсимволы (!@#$...)</span>
+            </label>
+        </div>
+
+        <button id="generate-btn">Сгенерировать</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
